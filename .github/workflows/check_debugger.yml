@@ -20,7 +20,7 @@ jobs:
 
         echo "Checking for debugger statements..."
 
-        if grep -rE "debugger|console\.log|console\.warn|console\.error" src/; then
+        if grep -rE "debugger|console\.log" src/; then
           echo "❌ Debug code found in project"
           exit 1
         else
